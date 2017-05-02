@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Know Ya Boo</string>
+    <string name="about_app">This app will allow players to guess what another player\'s response to a question will be.</string>
+    <string name="rule1">Players in a match will specify who their play-partner is.</string>
+    <string name="rule2">Each round, answer-player and guessing-player will alternate. A question will be posed, and players will respond accordingly.</string>
+    <string name="rule3">At the end of each round, all players in the match will be able to view the responses for each play-pair. If players deem the response to be close enough, a point will be awarded to that play pair.</string>
+    <string name="button_send">Send</string>
+    <string name="header_rules">About the App:</string>
+    <string name="menu_action_setting">Home</string>
+    <string name="about_us">About Us</string>
+    <string name="menu_recycler_view">Recycler View</string>
+    <string name="new_game">New Game</string>
+    <string name="score_board">Score Board</string>
+    <string name="find_players">Find Players</string>
+</resources>

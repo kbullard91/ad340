@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:title="@string/menu_action_setting"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_account_circle_white_24dp"/>
+
+    <item
+        android:id="@+id/about"
+        android:title="@string/about_us"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/recycler_view"
+        android:title="@string/menu_recycler_view"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/start_game"
+        android:title="@string/new_game"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/score_board"
+        android:title="@string/score_board"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/find_players"
+        android:title="@string/find_players"
+        app:showAsAction="never" />
+
+
+</menu>
