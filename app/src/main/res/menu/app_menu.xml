@@ -2,6 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <item
         android:id="@+id/home"
         android:title="@string/menu_action_setting"
@@ -33,5 +34,10 @@
         android:title="@string/find_players"
         app:showAsAction="never" />
 
+    <item android:id="@+id/search"
+        android:title="Find Players"
+        android:icon="@drawable/ic_search_white_24dp"
+        app:showAsAction="ifRoom"
+        android:actionViewClass="android.widget.SearchView" />
 
 </menu>
