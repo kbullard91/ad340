@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_alt);
+        setContentView(R.layout.activity_main);
 
         //Adds the button grid to the screen
         GridView gridView = (GridView)findViewById(R.id.gridview);
