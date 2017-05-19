@@ -12,4 +12,6 @@
     <string name="new_game">New Game</string>
     <string name="score_board">Score Board</string>
     <string name="find_players">Find Players</string>
+    <string name="server_client_id">595669322531-g22mq2a4gr0pckeirq881d09cv39flag.apps.googleusercontent.com</string>
+    <string name="title_activity_login">Sign in</string>
 </resources>

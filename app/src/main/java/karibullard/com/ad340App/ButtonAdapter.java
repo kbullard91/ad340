@@ -108,8 +108,6 @@ public class ButtonAdapter extends BaseAdapter {
                 }
             }
         });
-
-
         return button;
     }
 

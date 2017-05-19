@@ -7,21 +7,24 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 /**
  * Created by karibullard on 4/27/17.
  */
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
 
-    String[] Presidents;
+    ArrayList<String> users;
     Context context;
     View view1;
     ViewHolder viewHolder1;
     TextView textView;
 
-    public RecyclerViewAdapter(Context context1, String[] Presidents1){
 
-        Presidents = Presidents1;
+    public RecyclerViewAdapter(Context context1, ArrayList<String> users){
+
+        this.users = users;
         context = context1;
 
     }
@@ -35,6 +38,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             super(v);
 
             textView = (TextView)v.findViewById(R.id.subject_textview1);
+
+
         }
     }
 
@@ -51,12 +56,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, int position){
 
-        holder.textView.setText(Presidents[position]);
+//        User curUser = Presidents[position];
+//        String curName = curUser.getName();
+//        holder.textView.setText(curName);
     }
 
     @Override
     public int getItemCount(){
-
-        return Presidents.length;
+        return users.size();
     }
 }

@@ -15,17 +15,25 @@ import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     static final String EXTRA_MESSAGE = "karibullard.com.ad340App";
     Context context;
     Button[] buttons = new Button[4];
     GridView grid;
+    String url = "http://kbullard.icoolshow.net/ad340/single.json";
+    ArrayList<String> users;
+    private static String TAG = MainActivity.class.getSimpleName();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        users = new ArrayList<String>();
+
 
         //Adds the button grid to the screen
         GridView gridView = (GridView)findViewById(R.id.gridview);
@@ -37,12 +45,11 @@ public class MainActivity extends AppCompatActivity {
         //Main App Menu
         Toolbar mToolBar = (Toolbar) findViewById(R.id.app_menu);
         setSupportActionBar(mToolBar);
-
     }
 
     /**
      * Inflates the menu for the view
-     * @param menu Our meny object
+     * @param menu Our menu object
      * @return process completed flag
      */
     @Override
@@ -51,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         mMenuInflater.inflate(R.menu.app_menu, menu);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
