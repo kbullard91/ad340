@@ -10,10 +10,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-/**
- * Created by karibullard on 4/30/17.
- */
-
 public class DisplayAbout extends AppCompatActivity{
 
     @Override
@@ -26,7 +22,9 @@ public class DisplayAbout extends AppCompatActivity{
         Toolbar mToolBar = (Toolbar) findViewById(R.id.app_menu);
         setSupportActionBar(mToolBar);
         ActionBar ab = getSupportActionBar();
-        ab.setDisplayHomeAsUpEnabled(true);
+        if (ab != null) {
+            ab.setDisplayHomeAsUpEnabled(true);
+        }
 
     }
 
@@ -53,7 +51,7 @@ public class DisplayAbout extends AppCompatActivity{
             startActivity(intent);
         }
         if(item.getItemId() == R.id.recycler_view){
-            Intent intent = new Intent(this, DisplayInfoList.class);
+            Intent intent = new Intent(this, DisplayInfoListActivity.class);
             startActivity(intent);
         }
         if(item.getItemId() == R.id.start_game){

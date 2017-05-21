@@ -14,4 +14,8 @@
     <string name="find_players">Find Players</string>
     <string name="server_client_id">595669322531-g22mq2a4gr0pckeirq881d09cv39flag.apps.googleusercontent.com</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="player_status_action">Pair</string>
+    <string name="player_status_available">Available</string>
+    <string name="player_action_unavailabke">Unavailable</string>
+    <string name="player_action_unavailable">Paired</string>
 </resources>

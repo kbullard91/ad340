@@ -16,19 +16,15 @@ import android.widget.Toast;
 
 import static android.content.ContentValues.TAG;
 
-/**
- * Created by karibullard on 4/26/17.
- */
+class ButtonAdapter extends BaseAdapter {
 
-public class ButtonAdapter extends BaseAdapter {
+    private Context context;
+    private Button buttons[];
+    private LayoutInflater inflter;
 
-    Context context;
-    Button buttons[];
-    LayoutInflater inflter;
+    private String[] dialogItems = {"I like Lebron.", "I like Durant", "I like Curry", "I like turtles."};
 
-    String[] dialogItems = {"I like Lebron.", "I like Durant", "I like Curry", "I like turtles."};
-
-    public ButtonAdapter(Context applicationContext, Button[] buttons) {
+    ButtonAdapter(Context applicationContext, Button[] buttons) {
         this.context = applicationContext;
         this.buttons = buttons;
         inflter = (LayoutInflater.from(applicationContext));
@@ -60,7 +56,7 @@ public class ButtonAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 if(position == 0){
-                    Intent intent = new Intent(context, DisplayInfoList.class);
+                    Intent intent = new Intent(context, DisplayInfoListActivity.class);
                     context.startActivity(intent);
                 } else if (position == 1) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(context);

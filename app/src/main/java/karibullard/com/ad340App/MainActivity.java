@@ -32,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        users = new ArrayList<String>();
-
 
         //Adds the button grid to the screen
         GridView gridView = (GridView)findViewById(R.id.gridview);
@@ -71,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
         if(item.getItemId() == R.id.recycler_view){
-            Intent intent = new Intent(this, DisplayInfoList.class);
+            Intent intent = new Intent(this, DisplayInfoListActivity.class);
             startActivity(intent);
         }
         if(item.getItemId() == R.id.start_game){
