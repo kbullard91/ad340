@@ -7,10 +7,12 @@ import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.Window;
 import android.widget.Toast;
@@ -55,11 +57,13 @@ public class DisplayInfoListActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_info_list);
 
-        //Main App Menu
+//Main App Menu
         Toolbar mToolBar = (Toolbar) findViewById(R.id.app_menu);
         setSupportActionBar(mToolBar);
-//        getActionBar().setDisplayHomeAsUpEnabled(true);
-//        getActionBar().setHomeButtonEnabled(true);
+        ActionBar ab = getSupportActionBar();
+        if (ab != null) {
+            ab.setDisplayHomeAsUpEnabled(true);
+        }
 
         //Setup view for RecyclerViewAdapter
         recyclerView = (RecyclerView) findViewById(R.id.rvItems);
@@ -81,9 +85,6 @@ public class DisplayInfoListActivity extends AppCompatActivity {
                         new IntentFilter(GetCurrentPlayers.MY_SERVICE_MESSAGE));
     }
 
-//
-//    }
-
     /**
      * Displays received data in the recycler view
      */
@@ -96,37 +97,37 @@ public class DisplayInfoListActivity extends AppCompatActivity {
 
     /**
      * Inflates the menu for the view
-     *
-     * @param menu menu object
+     * @param menu Our meny object
      * @return process completed flag
      */
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.app_menu, menu);
-        return super.onCreateOptionsMenu(menu);
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater mMenuInflater = getMenuInflater();
+        mMenuInflater.inflate(R.menu.app_menu, menu);
+        return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.home) {
+    public boolean onOptionsItemSelected(MenuItem item){
+        if(item.getItemId() == R.id.home){
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }
-        if (item.getItemId() == R.id.about) {
+        if(item.getItemId() == R.id.about){
             Intent intent = new Intent(this, DisplayAbout.class);
             startActivity(intent);
         }
-        if (item.getItemId() == R.id.recycler_view) {
+        if(item.getItemId() == R.id.recycler_view){
             Intent intent = new Intent(this, DisplayInfoListActivity.class);
             startActivity(intent);
         }
-        if (item.getItemId() == R.id.start_game) {
+        if(item.getItemId() == R.id.start_game){
             Toast.makeText(DisplayInfoListActivity.this, "You have clicked on start game", Toast.LENGTH_SHORT).show();
         }
-        if (item.getItemId() == R.id.score_board) {
+        if(item.getItemId() == R.id.score_board){
             Toast.makeText(DisplayInfoListActivity.this, "You have clicked on score board", Toast.LENGTH_SHORT).show();
         }
-        if (item.getItemId() == R.id.find_players) {
+        if(item.getItemId() == R.id.find_players){
             Toast.makeText(DisplayInfoListActivity.this, "You have clicked on find players", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
@@ -136,17 +137,6 @@ public class DisplayInfoListActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-//        if (resultCode == RESULT_OK && requestCode == SIGNIN_REQUEST) {
-//            String email = data.getStringExtra(SigninActivity.EMAIL_KEY);
-//            Toast.makeText(this, "You signed in as " + email, Toast.LENGTH_SHORT).show();
-//
-//            SharedPreferences.Editor editor =
-//                    getSharedPreferences(MY_GLOBAL_PREFS, MODE_PRIVATE).edit();
-//            editor.putString(SigninActivity.EMAIL_KEY, email);
-//            editor.apply();
-//
-//        }
 
     }
 

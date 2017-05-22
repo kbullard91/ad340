@@ -10,22 +10,22 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import static karibullard.com.ad340App.R.id.gridview;
+
 public class MainActivity extends AppCompatActivity {
 
     static final String EXTRA_MESSAGE = "karibullard.com.ad340App";
     Context context;
-    Button[] buttons = new Button[4];
     GridView grid;
-    String url = "http://kbullard.icoolshow.net/ad340/single.json";
     ArrayList<String> users;
     private static String TAG = MainActivity.class.getSimpleName();
+    private String[] dialogItems = {"I like Lebron.", "I like Durant", "I like Curry", "I like turtles."};
 
 
     @Override
@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Adds the button grid to the screen
-        GridView gridView = (GridView)findViewById(R.id.gridview);
-        gridView.setAdapter(new ButtonAdapter(this, buttons));
+        GridView gridView = (GridView)findViewById(gridview);
+        gridView.setAdapter(new ButtonAdapter(this));
 
         //Keeps keyboard from autoloading
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);

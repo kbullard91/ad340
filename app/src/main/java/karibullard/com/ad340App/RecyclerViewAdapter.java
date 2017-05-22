@@ -50,7 +50,12 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewH
 
         final Player activePlayer = players.get(position);
         try {
-            holder.playerName.setText(activePlayer.getFirstName());
+            holder.playerName.setText(activePlayer.getFirstName() + " " + activePlayer.getLastName());
+            if(activePlayer.getPlayStatus() == 0){
+                holder.playerStatus.setText("Available");
+            } else {
+                holder.playerStatus.setText("Paired");
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

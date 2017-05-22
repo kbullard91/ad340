@@ -1,12 +1,16 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-
-        <item name="colorAccent">@android:color/holo_red_dark</item>
-        <item name="colorPrimaryDark">@android:color/holo_purple</item>
-        <item name="android:colorForeground">@android:color/holo_purple</item>
-        <item name="colorPrimary">@android:color/holo_purple</item>
+    <style name="GradientAppTheme" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="colorPrimary">@color/gradient_purple</item>
+        <item name="android:colorBackground">@color/gradient_purple</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorAccent">@color/gradient_peach</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@color/gradient_purple</item>
+        <item name="android:textColorPrimaryInverse">@color/gradient_purple</item>
+        <item name="android:textColorSecondaryInverse">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
     </style>
 
 </resources>

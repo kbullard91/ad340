@@ -3,11 +3,26 @@
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
-        <item name="colorAccent">@android:color/holo_red_dark</item>
-        <item name="colorPrimaryDark">@android:color/holo_purple</item>
+        <item name="colorAccent">@color/gradient_peach</item>
+        <item name="colorPrimaryDark">@color/gradient_pink</item>
         <item name="android:colorForeground">@android:color/holo_purple</item>
-        <item name="colorPrimary">@android:color/holo_purple</item>
+        <item name="colorPrimary">@color/gradient_purple</item>
         <item name="android:statusBarColor">@android:color/holo_red_dark</item>
         <item name="android:navigationBarColor">@android:color/holo_red_dark</item>
+    </style>
+
+    <style name="GradientAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/gradient_purple</item>
+        <item name="android:colorBackground">@color/gradient_purple</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorAccent">@color/gradient_peach</item>
+        <item name="android:statusBarColor">@color/gradient_purple</item>
+        <item name="android:navigationBarColor">@color/gradient_purple</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorForeground">?attr/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">?android:attr/colorEdgeEffect</item>
+        <item name="android:textColorPrimaryInverse">@color/gradient_purple</item>
+        <item name="android:textColorSecondaryInverse">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
     </style>
 </resources>

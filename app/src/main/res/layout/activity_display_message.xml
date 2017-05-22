@@ -5,7 +5,8 @@
     android:id="@+id/activity_display_message"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="karibullard.com.ad340App.DisplayMessageActivity">
+    tools:context="karibullard.com.ad340App.DisplayMessageActivity"
+    android:background="@drawable/gradient_background">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/app_menu"

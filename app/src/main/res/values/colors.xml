@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="background">#fafafa</color>
+    <color name="gradient_blue">#3494e6</color>
+    <color name="gradient_pink">#ec6ead</color>
+    <color name="gradient_peach">#ffab91</color>
+    <color name="gradient_purple">#5900b3</color>
+    <color name="muted_gray">#f2f2f2</color>
+    <color name="white">#ffffff</color>
 </resources>

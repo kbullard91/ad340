@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/app_menu"
@@ -13,8 +14,6 @@
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
         android:layout_marginTop="0dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -41,10 +40,10 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"
         android:hint="@string/button_send"
         android:onClick="sendMessage"
         android:text="@string/button_send"
+        android:background="@color/gradient_purple"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_menu"
         android:layout_alignBaseline="@+id/editText"
@@ -53,21 +52,18 @@
 
     <GridView
         android:id="@+id/gridview"
-        android:layout_width="325dp"
-        android:layout_height="325dp"
-        android:layout_marginLeft="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
         android:gravity="center"
-        android:horizontalSpacing="5dp"
         android:numColumns="2"
         android:verticalSpacing="10dp"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        android:layout_marginBottom="61dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:layout_below="@+id/button"
+        android:layout_alignParentEnd="true"/>
 
 </RelativeLayout>
