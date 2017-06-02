@@ -72,6 +72,13 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, DisplayInfoListActivity.class);
             startActivity(intent);
         }
+        if(item.getItemId() == R.id.location){
+            Intent intent = new Intent(this, MapsActivity.class);
+            startActivity(intent);
+        }
+        if (item.getItemId() == R.id.option_get_place) {
+            Toast.makeText(MainActivity.this, "Not available", Toast.LENGTH_SHORT).show();
+        }
         if(item.getItemId() == R.id.start_game){
             Toast.makeText(MainActivity.this, "You have clicked on start game", Toast.LENGTH_SHORT).show();
         }

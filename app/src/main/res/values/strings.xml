@@ -18,4 +18,18 @@
     <string name="player_status_available">Available</string>
     <string name="player_action_unavailabke">Unavailable</string>
     <string name="player_action_unavailable">Paired</string>
+    <string name="default_info_title">Default Location</string>
+    <string name="default_info_snippet">No places found, because location permission is disabled.</string>
+    <string name="pick_place">Choose a place</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="option_get_place">Get place</string>
+    <string name="title_activity_map_location">Map</string>
+    <string name="label_latitude">Latitude</string>
+    <string name="label_longitude">Longitude</string>
+    <string name="label_location">Location</string>
+    <string name="no_location_data">No Location Data</string>
+    <string name="service_not_available">Service unavailable</string>
+    <string name="address_found">Address found</string>
+    <string name="no_address_found">No address found</string>
+    <string name="invalid_lat_long_used">Invalid Lat/Long</string>
 </resources>

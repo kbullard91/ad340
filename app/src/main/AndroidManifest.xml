@@ -1,67 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="karibullard.com.ad340App">
+<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools" package="karibullard.com.ad340App">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/GradientAppTheme"
-        android:fullBackupContent="@xml/backup_descriptor"
-        tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="karibullard.com.ad340App.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        android:theme="@style/GradientAppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB_8F7vtUzuWGwVwdaEIw9JXv-ADe9jRJ4" />
+
+    <activity android:name=".MainActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    <!-- A child of the main activity -->
+    <activity android:name=".DisplayAbout" android:parentActivityName=".MainActivity">
+
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="karibullard.com.ad340App.MainActivity" />
+    </activity>
+    <!-- A child of the main activity -->
+    <activity android:name=".DisplayInfoListActivity" android:parentActivityName=".MainActivity">
+
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="karibullard.com.ad340App.MainActivity" />
+    </activity>
+    <!-- A child of the DisplayInfoListActivity -->
+    <activity android:name=".PlayerDetailActivity" android:parentActivityName=".DisplayInfoListActivity">
+
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="karibullard.com.ad340App.DisplayInfoListActivity" />
+    </activity>
+    <!-- A child of the main activity -->
+    <activity android:name=".DisplayMessageActivity" android:parentActivityName=".MainActivity">
+
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="karibullard.com.ad340App.MainActivity" />
+    </activity>
+
         <!-- A child of the main activity -->
-        <activity
-            android:name="karibullard.com.ad340App.DisplayAbout"
-            android:parentActivityName="karibullard.com.ad340App.MainActivity">
+        <activity android:name=".MapsActivity" android:parentActivityName=".MainActivity">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="karibullard.com.ad340App.MainActivity" />
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="karibullard.com.ad340App.MainActivity" />
         </activity>
-        <!-- A child of the main activity -->
-        <activity
-            android:name="karibullard.com.ad340App.DisplayInfoListActivity"
-            android:parentActivityName="karibullard.com.ad340App.MainActivity">
 
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="karibullard.com.ad340App.MainActivity" />
-        </activity>
-        <!-- A child of the DisplayInfoListActivity -->
-        <activity
-            android:name="karibullard.com.ad340App.PlayerDetailActivity"
-            android:parentActivityName="karibullard.com.ad340App.DisplayInfoListActivity">
+    <service android:name=".services.GetCurrentPlayers" android:exported="false" />
 
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="karibullard.com.ad340App.DisplayInfoListActivity" />
-        </activity>
-        <!-- A child of the main activity -->
-        <activity
-            android:name="karibullard.com.ad340App.DisplayMessageActivity"
-            android:parentActivityName="karibullard.com.ad340App.MainActivity">
+</application>
 
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="karibullard.com.ad340App.MainActivity" />
-        </activity>
-        <service
-            android:name=".services.GetCurrentPlayers"
-            android:exported="false" />
-    </application>
 </manifest>

@@ -64,6 +64,10 @@ public class DisplayMessageActivity extends AppCompatActivity {
             Intent intent = new Intent(this, DisplayInfoListActivity.class);
             startActivity(intent);
         }
+        if(item.getItemId() == R.id.location){
+            Intent intent = new Intent(this, MapsActivity.class);
+            startActivity(intent);
+        }
         if(item.getItemId() == R.id.start_game){
             Toast.makeText(DisplayMessageActivity.this, "You have clicked on start game", Toast.LENGTH_SHORT).show();
         }
